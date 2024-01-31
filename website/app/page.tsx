@@ -1,9 +1,7 @@
-import { CheckCircle2, Type } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { Hero } from "./components/Hero";
 import { SourceCode } from "@/components/SourceCode";
 import { ReactNode } from "react";
-import Typewriter from "typewriter-effect";
-import { TypeContent } from "@/components/TypeContent";
 import { HmrSection } from "./components/HmrSection";
 
 const simleTypeSafeAPI = `
@@ -74,16 +72,10 @@ function Feature({ title, children }: FeatureProps) {
 
 export default function Home() {
   return (
-    <main className="min-h-svh">
+    <main>
       <Hero />
       <HmrSection />
-      <div className="px-10 grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-        <TypeContent
-          title="Beautiful DX"
-          prefix="HMR for content is"
-          content={["awesome.", "cool.", "incredible."]}
-        />
-        <Feature title="Beautiful DX">HMR for your content.</Feature>
+      <div className="px-10 grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 max-w-5xl mx-auto">
         <SourceCode lang="tsx">{simleTypeSafeAPI}</SourceCode>
         <Feature title="Simple &amp; TypeSafe API">
           Content Collection generates a simple, but typesafe API for your

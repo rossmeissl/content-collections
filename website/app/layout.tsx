@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={cn(
           "bg-fixed bg-gradient-to-bl from-slate-950 to-slate-800 text-slate-300",
-          "max-w-5xl min-h-svh mx-auto flex flex-col",
+          "min-h-svh flex flex-col",
           "selection:bg-orange-500 selection:text-white",
           inter.className
         )}

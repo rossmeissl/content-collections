@@ -27,7 +27,7 @@ function Logo({ className }: LogoProps) {
 
 export function Hero() {
   return (
-    <header className="grid grid-cols-1 sm:grid-cols-[auto,1fr] gap-4 py-5 px-10">
+    <header className="grid grid-cols-1 sm:grid-cols-[auto,1fr] gap-4 py-5 px-10 max-w-5xl mx-auto">
       <Logo className="md:row-span-3" />
       <h1 className="text-4xl font-bold text-slate-50 self-center">
         Content Collections

@@ -20,7 +20,7 @@ export function Editor({ className, children }: Props) {
         <Circle className="text-amber-500 fill-current size-3" />
         <Circle className="text-emerald-500 fill-current size-3" />
       </header>
-      <main className="p-5">
+      <main className="p-5 overflow-y-visible overflow-x-scroll">
         <pre>
           <code>{children}</code>
         </pre>
