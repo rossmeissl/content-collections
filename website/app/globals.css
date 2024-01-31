@@ -58,3 +58,31 @@
     @apply scroll-smooth;
   }
 }
+
+.cursor {
+  @apply border border-orange-500;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    @apply border-orange-500;
+  }
+}
+
+.line-highlighting .line {
+  @apply opacity-50;
+}
+
+.line-highlighting .highlighted {
+  @apply bg-slate-700/50 opacity-100;
+  transition: background-color 0.5s;
+  margin: 0 -24px;
+  padding: 0 24px;
+  width: calc(100% + 48px);
+  display: inline-block;
+}

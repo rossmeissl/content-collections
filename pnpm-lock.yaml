@@ -143,6 +143,57 @@ importers:
         specifier: ^4.2.1
         version: 4.3.1(typescript@5.3.3)(vite@5.0.12)
 
+  integrations/qwik:
+    devDependencies:
+      '@builder.io/qwik':
+        specifier: ^1.4.1
+        version: 1.4.1(@types/node@20.11.7)(undici@5.28.2)
+      '@builder.io/qwik-city':
+        specifier: ^1.4.1
+        version: 1.4.1(@types/node@20.11.7)
+      '@content-collections/core':
+        specifier: 0.2.0
+        version: link:../../packages/core
+      '@content-collections/vite':
+        specifier: 0.1.2
+        version: link:../../packages/vite
+      '@playwright/test':
+        specifier: ^1.40.1
+        version: 1.40.1
+      '@types/eslint':
+        specifier: ^8.56.2
+        version: 8.56.2
+      '@types/node':
+        specifier: ^20.11.6
+        version: 20.11.7
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.19.1
+        version: 6.19.1(@typescript-eslint/parser@6.19.1)(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/parser':
+        specifier: ^6.19.1
+        version: 6.19.1(eslint@8.56.0)(typescript@5.3.3)
+      eslint:
+        specifier: ^8.56.0
+        version: 8.56.0
+      eslint-plugin-qwik:
+        specifier: ^1.4.1
+        version: 1.4.1(eslint@8.56.0)
+      prettier:
+        specifier: ^3.2.4
+        version: 3.2.4
+      typescript:
+        specifier: 5.3.3
+        version: 5.3.3
+      undici:
+        specifier: '*'
+        version: 5.28.2
+      vite:
+        specifier: ^5.0.12
+        version: 5.0.12(@types/node@20.11.7)
+      vite-tsconfig-paths:
+        specifier: ^4.2.1
+        version: 4.3.1(typescript@5.3.3)(vite@5.0.12)
+
   integrations/remix-vite:
     dependencies:
       '@remix-run/node':
@@ -667,6 +718,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.2.46)(react@18.2.0)
+      '@shikijs/transformers':
+        specifier: 1.0.0-beta.1
+        version: 1.0.0-beta.1
       bright:
         specifier: ^0.8.4
         version: 0.8.4(react@18.2.0)
@@ -697,6 +751,9 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.0)
+      typewriter-effect:
+        specifier: ^2.21.0
+        version: 2.21.0(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@content-collections/core':
         specifier: workspace:*
@@ -728,9 +785,15 @@ importers:
       eslint-config-next:
         specifier: 14.1.0
         version: 14.1.0(eslint@8.56.0)(typescript@5.3.3)
+      hast-util-to-jsx-runtime:
+        specifier: ^2.3.0
+        version: 2.3.0
       postcss:
         specifier: ^8
         version: 8.4.32
+      shiki:
+        specifier: 1.0.0-beta.1
+        version: 1.0.0-beta.1
       tailwindcss:
         specifier: ^3.4.0
         version: 3.4.0
@@ -3545,6 +3608,15 @@ packages:
   /@rushstack/eslint-patch@1.6.1:
     resolution: {integrity: sha512-UY+FGM/2jjMkzQLn8pxcHGMaVLh9aEitG3zY2CiY7XHdLiz3bZOwa6oDxNqEMv7zZkV+cj5DOdz0cQ1BP5Hjgw==}
     dev: true
+
+  /@shikijs/core@1.0.0-beta.1:
+    resolution: {integrity: sha512-z3gdznaRj/DJSLQdR2Gdx6AB3e5+Il/kSGdLTGHI7HnalgPL15RbGgBSdLHW8rKAz4+dezAcTdnxm8z6YTu7nA==}
+
+  /@shikijs/transformers@1.0.0-beta.1:
+    resolution: {integrity: sha512-JBqx7GbxNUu1jYJTUV+GTz0g5jY0bF2Q5GyrLdCZO0W4y9vmXuaewdUJdNgZtoHDTdeH4j0lTPNIAa9OIGlayg==}
+    dependencies:
+      shiki: 1.0.0-beta.1
+    dev: false
 
   /@sinclair/typebox@0.27.8:
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -10325,6 +10397,10 @@ packages:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
     dev: false
 
+  /performance-now@2.1.0:
+    resolution: {integrity: sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow==}
+    dev: false
+
   /periscopic@3.1.0:
     resolution: {integrity: sha512-vKiQ8RRtkl9P+r/+oefh25C3fhybptkHKCZSPlcXiJux2tJF55GnEj3BVn4A5gKfq9NWWXXrxkHBwVPUfH0opw==}
     dependencies:
@@ -10619,7 +10695,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: true
 
   /property-information@6.4.0:
     resolution: {integrity: sha512-9t5qARVofg2xQqKtytzt+lZ4d1Qvj8t5B8fEwXK6qOfgRLgH/b13QlgEyDh033NOS31nXeFbYv7CLUDG1CeifQ==}
@@ -10684,6 +10759,12 @@ packages:
     resolution: {integrity: sha512-pNsHDxbGORSvuSScqNJ+3Km6QAVqk8CfsCBIEoDgpqLrkD2f3QM4I7d1ozJJ172OmIcoUcerZaNWqtLkRXTV3A==}
     dev: false
 
+  /raf@3.4.1:
+    resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
+    dependencies:
+      performance-now: 2.1.0
+    dev: false
+
   /randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
@@ -10721,7 +10802,6 @@ packages:
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: true
 
   /react-is@18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
@@ -11380,6 +11460,11 @@ packages:
   /shell-quote@1.8.1:
     resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
     dev: true
+
+  /shiki@1.0.0-beta.1:
+    resolution: {integrity: sha512-iq32WxjemJVlAHg5HjYoL1qCxGmvyh3Z8kr2E/gMTQdcxyXxTpMhahIC7myxFBapAk9o8QN8mxCpr4JT5rqpRQ==}
+    dependencies:
+      '@shikijs/core': 1.0.0-beta.1
 
   /shikiji-core@0.9.19:
     resolution: {integrity: sha512-AFJu/vcNT21t0e6YrfadZ+9q86gvPum6iywRyt1OtIPjPFe25RQnYJyxHQPMLKCCWA992TPxmEmbNcOZCAJclw==}
@@ -12495,6 +12580,18 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  /typewriter-effect@2.21.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-Y3VL1fuJpUBj0gS4OTXBLzy1gnYTYaBuVuuO99tGNyTkkub5CXi+b/hsV7Og9fp6HlhogOwWJwgq7iXI5sQlEg==}
+    peerDependencies:
+      react: ^17.x || ^18.x
+      react-dom: ^17.x || ^18.x
+    dependencies:
+      prop-types: 15.8.1
+      raf: 3.4.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /ufo@1.3.2:
     resolution: {integrity: sha512-o+ORpgGwaYQXgqGDwd+hkS4PuZ3QnmqMMxRuajK/a38L6fTpcE5GPIfrf+L/KemFzfUpeUQc1rRS1iDBozvnFA==}
@@ -13626,7 +13723,7 @@ packages:
       strip-literal: 1.3.0
       tinybench: 2.5.1
       tinypool: 0.8.1
-      vite: 5.0.12(@types/node@20.10.6)
+      vite: 5.0.10(@types/node@20.10.6)
       vite-node: 1.1.1(@types/node@20.10.6)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
