@@ -32,10 +32,10 @@ function handleComment(comment: string) {
 
 export const commentTransformer = (className?: string): ShikiTransformer => ({
   pre(node) {
-    node.properties.className = cn(
+    /*node.properties.className = cn(
       "p-4 rounded-md shadow-md text-sm overflow-x-scroll overflow-y-visible",
       className
-    );
+    );*/
   },
   span(node) {
     for (const el of node.children) {
