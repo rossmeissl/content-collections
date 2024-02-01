@@ -77,7 +77,7 @@ export default function Home() {
       <Hero />
       <HmrSection />
       <TypeSafeApiSection />
-      <div className="px-10 grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 max-w-5xl mx-auto">
+      <div className="hidden px-10 grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 max-w-5xl mx-auto">
         <SourceCode lang="ts" lineHighlighter>
           {powerfulValidation}
         </SourceCode>

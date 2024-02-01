@@ -40,7 +40,8 @@ export async function TypeSafeApiSection() {
     transformers: [commentTransformer()],
   });
   return (
-    <section className="max-w-5xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-5 p-10">
+    <section className="p-10">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
       <div className="flex flex-col gap-5">
         <h2 className="text-4xl font-bold mb-5 flex items-center">
           <CheckCircle2 className="inline-block mr-2 size-8 text-primary" />
@@ -61,6 +62,7 @@ export async function TypeSafeApiSection() {
         <TsLogo />
       </div>
       <Editor>{api}</Editor>
+      </div>
     </section>
   );
 }
