@@ -86,3 +86,7 @@
   width: calc(100% + 48px);
   display: inline-block;
 }
+
+.Typewriter__cursor {
+  @apply text-orange-500;
+}
