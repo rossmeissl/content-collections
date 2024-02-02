@@ -38,6 +38,8 @@ export async function codeToJsx(code: string | string[], options: Options) {
     sourceCode = code;
   }
 
+  sourceCode = sourceCode.trim();
+
   let tree: any = await codeToHast(sourceCode, {
     ...options,
     theme: "github-dark-dimmed",

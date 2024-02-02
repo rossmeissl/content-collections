@@ -11,7 +11,7 @@ export function Editor({ className, children }: Props) {
   return (
     <div
       className={cn(
-        "bg-[#22272E] rounded-md shadow-md border border-slate-600/50",
+        "bg-[#22272E] rounded-md overflow-x-scroll shadow-md border border-slate-600/50",
         className
       )}
     >
@@ -20,7 +20,7 @@ export function Editor({ className, children }: Props) {
         <Circle className="text-amber-500 fill-current size-3" />
         <Circle className="text-emerald-500 fill-current size-3" />
       </header>
-      <main className="p-5 overflow-y-visible overflow-x-scroll">
+      <main className="p-5 overflow-y-visible">
         <pre>
           <code>{children}</code>
         </pre>

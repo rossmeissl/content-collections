@@ -28,11 +28,18 @@ export function Content({ className, children }: Props) {
   );
 }
 
-export function Title({ className, children }: Props) {
+type TitleProps = Props & {
+  center?: boolean;
+};
+
+export function Title({ center, className, children }: TitleProps) {
   return (
     <h2
       className={cn(
-        "text-4xl font-bold mb-6 flex items-center justify-center",
+        "text-4xl font-bold mb-6 flex items-center",
+        {
+          "justify-center": center,
+        },
         className
       )}
     >

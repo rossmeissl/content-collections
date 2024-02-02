@@ -1,7 +1,6 @@
 import { commentTransformer } from "@/components/CommentTransformer";
 import { Editor } from "@/components/Editor";
 import { codeToJsx } from "@/lib/codeToJsx";
-import { CheckCircle2 } from "lucide-react";
 import { Content, Section, Title } from "./Section";
 
 const simleTypeSafeAPI = `

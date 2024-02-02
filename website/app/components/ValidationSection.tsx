@@ -61,8 +61,8 @@ export async function ValidationSection() {
 
   return (
     <Section>
-      <Content className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <Editor className="order-2 md:order-none h-[21rem] md:h-full">
+      <Content className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+        <Editor className="order-2 md:order-none h-[21rem]">
           {api}
         </Editor>
         <div className="flex flex-col gap-5">
