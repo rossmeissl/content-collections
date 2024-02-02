@@ -1,9 +1,10 @@
-import { CheckCircle2, Type } from "lucide-react";
+import { CheckCircle2, Power, Type } from "lucide-react";
 import { Hero } from "./components/Hero";
 import { SourceCode } from "@/components/SourceCode";
 import { ReactNode } from "react";
 import { HmrSection } from "./components/HmrSection";
 import { TypeSafeApiSection } from "./components/TypeSafeApiSection";
+import { ValidationSection } from "./components/ValidationSection";
 
 const simleTypeSafeAPI = `
 import { allPosts } from "content-collections";
@@ -77,14 +78,9 @@ export default function Home() {
       <Hero />
       <HmrSection />
       <TypeSafeApiSection />
+      <ValidationSection />
       <div className="hidden px-10 grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 max-w-5xl mx-auto">
-        <SourceCode lang="ts" lineHighlighter>
-          {powerfulValidation}
-        </SourceCode>
-        <Feature title="Powerful Validation">
-          Content Collection uses zod to validate your content. This means you
-          can use all the power of zod to validate your content.
-        </Feature>
+
         <SourceCode lang="ts" lineHighlighter>
           {transformation}
         </SourceCode>
