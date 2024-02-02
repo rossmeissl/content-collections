@@ -3,6 +3,7 @@ import { commentComponentTransformer } from "@/components/commentComponentTransf
 import { codeToJsx } from "@/lib/codeToJsx";
 import { CheckCircle2 } from "lucide-react";
 import { CodeMotion } from "./CodeMotion";
+import { Content, Section, Title } from "./Section";
 
 const code = `const samples = defineCollection({
   name: "samples",
@@ -59,14 +60,13 @@ export async function ValidationSection() {
   });
 
   return (
-    <section className="p-10">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        <Editor className="order-2 md:order-none h-[21rem] md:h-full">{api}</Editor>
+    <Section>
+      <Content className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <Editor className="order-2 md:order-none h-[21rem] md:h-full">
+          {api}
+        </Editor>
         <div className="flex flex-col gap-5">
-          <h2 className="text-4xl font-bold mb-5 flex items-center">
-            <CheckCircle2 className="inline-block mr-2 size-8 text-primary" />
-            <span>Powerful Validation</span>
-          </h2>
+          <Title>Powerful Validation</Title>
           <p>
             Content Collections will validate your content against your defined
             schema. No document will be added to your collection if it does not
@@ -84,7 +84,7 @@ export async function ValidationSection() {
             contain any invalid content.
           </p>
         </div>
-      </div>
-    </section>
+      </Content>
+    </Section>
   );
 }

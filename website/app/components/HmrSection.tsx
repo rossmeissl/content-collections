@@ -2,6 +2,7 @@ import { Editor } from "@/components/Editor";
 import { codeToJsx } from "@/lib/codeToJsx";
 import { CheckCircle2 } from "lucide-react";
 import { HmrInAction } from "./HmrInAction";
+import { Content, Section, Title } from "./Section";
 
 const frontmatterSource = `---
 title: "Beautiful DX"
@@ -33,31 +34,9 @@ export async function HmrSection() {
     lang: "yaml",
   });
   return (
-    <section className="relative p-10 mt-10">
-      <svg
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full text-slate-500/40 [mask-image:radial-gradient(black,transparent)]"
-      >
-        <defs>
-          <pattern
-            id="rectangles"
-            width="64"
-            height="64"
-            patternUnits="userSpaceOnUse"
-            x="50%"
-            patternTransform="translate(0 80)"
-          >
-            <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#rectangles)"></rect>
-      </svg>
-      <div className="absolute inset-0 " />
-      <div className="relative max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6 flex items-center justify-center">
-          <CheckCircle2 className="inline-block mr-2 size-8 text-primary" />
-          <span>Beautiful DX</span>
-        </h2>
+    <Section className="mt-10" backgroundGrid>
+      <Content>
+        <Title>Beautiful DX</Title>
         <p className="text-lg max-w-2xl text-center mx-auto">
           Content Collections is designed to provide a pleasurable user
           experience. It offers a seamless developer experience without the need
@@ -75,7 +54,7 @@ export async function HmrSection() {
           </Editor>
         </div>
         <HmrInAction />
-      </div>
-    </section>
+      </Content>
+    </Section>
   );
 }

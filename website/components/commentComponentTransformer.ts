@@ -46,8 +46,6 @@ export function commentComponentTransformer(
         return node;
       }
 
-      console.log("cmp line");
-
       return {
         type: "element",
         tagName: "div",

@@ -2,6 +2,7 @@ import { commentTransformer } from "@/components/CommentTransformer";
 import { Editor } from "@/components/Editor";
 import { codeToJsx } from "@/lib/codeToJsx";
 import { CheckCircle2 } from "lucide-react";
+import { Content, Section, Title } from "./Section";
 
 const simleTypeSafeAPI = `
 import { allPosts } from "content-collections";
@@ -40,13 +41,10 @@ export async function TypeSafeApiSection() {
     transformers: [commentTransformer()],
   });
   return (
-    <section className="p-10">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+    <Section>
+      <Content className=" grid grid-cols-1 md:grid-cols-2 items-center gap-10">
         <div className="flex flex-col gap-5">
-          <h2 className="text-4xl font-bold mb-5 flex items-center">
-            <CheckCircle2 className="inline-block mr-2 size-8 text-primary" />
-            <span>Simple TypeSafe API</span>
-          </h2>
+          <Title>Simple TypeSafe API</Title>
           <p>
             No need to manually fetch and parse your content anymore. Just
             import it and start using Content Collections. It provides a simple
@@ -62,7 +60,7 @@ export async function TypeSafeApiSection() {
           <TsLogo />
         </div>
         <Editor>{api}</Editor>
-      </div>
-    </section>
+      </Content>
+    </Section>
   );
 }
