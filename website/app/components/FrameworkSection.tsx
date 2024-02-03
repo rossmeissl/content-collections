@@ -1,0 +1,36 @@
+import { allIntegrations } from "@/.content-collections/generated";
+import { Content, Section, Title } from "./Section";
+import { BrandIcon } from "@/components/BrandIcon";
+import Link from "next/link";
+
+export function FrameworkSection() {
+  return (
+    <Section>
+      <Content className="space-y-10 text-center">
+        <Title center>Support</Title>
+        <p className="text-lg max-w-2xl text-center mx-auto">
+          Content Collection includes a range of adapters that support popular
+          web frameworks. It also provides a CLI tool for use in environments
+          without native support.
+        </p>
+        <ul className="grid grid-cols-2 sm:grid-cols-3 gap-20 pt-10 mx-auto max-w-60 sm:max-w-xs md:max-w-lg justify-items-center">
+          {allIntegrations
+            .filter((integration) => integration.name !== "cli")
+            .map((integration) => (
+              <li key={integration.name}>
+                <Link
+                  title={integration.description}
+                  href={`/docs/integrations/${integration.name}`}
+                >
+                  <BrandIcon
+                    icon={integration.icon || integration.name}
+                    className="size-24 md:size-32 grayscale hover:drop-shadow-[0_25px_25px_rgb(255_255_255/0.15)] hover:drop-shadow-white hover:grayscale-0 transition-all duration-500"
+                  />
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </Content>
+    </Section>
+  );
+}

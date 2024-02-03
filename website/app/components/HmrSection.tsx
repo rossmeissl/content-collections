@@ -17,10 +17,10 @@ function Preview() {
     <div className="absolute top-0 bottom-0 flex items-start md:items-center right-0">
       <div className="bg-slate-700/90 font-sans border border-slate-400/50 rounded-md shadow-md p-5 w-72 md:w-96 flex flex-col">
         <header className="font-bold text-2xl">Beautiful DX</header>
-        <main className="flex-grow my-5 flex gap-1.5">
+        <div className="flex-grow my-5 flex gap-1.5">
           <span>HMR for content is</span>
           <span id="hmr-target"></span>
-        </main>
+        </div>
         <footer className="self-end text-sm text-slate-400">
           Sebastian Sdorra
         </footer>
