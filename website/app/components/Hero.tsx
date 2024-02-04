@@ -3,6 +3,7 @@ import LogoImage from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { GettingStartedButton } from "./GettingStartedButton";
 
 type LogoProps = {
   className?: string;
@@ -39,17 +40,7 @@ export function Hero() {
         Preprocess your data before it enters your app.
       </p>
       <div className="gap-4 sm:flex-row flex-col flex sm:col-span-2 md:col-span-1">
-        <Button size="lg" className="sm:w-fit" asChild>
-          <Link href="/docs">Getting started</Link>
-        </Button>
-        <Button
-          size="lg"
-          className="sm:w-fit outline outline-2 hover:bg-slate-800"
-          variant="ghost"
-          asChild
-        >
-          <a href="#see-it-in-action">See it in action</a>
-        </Button>
+        <GettingStartedButton />
       </div>
     </header>
   );
