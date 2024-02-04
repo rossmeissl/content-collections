@@ -6,7 +6,7 @@ export function GettingStartedButton() {
     <Link
       href="/docs"
       className={cn(
-        "inline-flex relative group justify-between items-center transition-colors h-12 bg-orange-600 hover:bg-orange-700 rounded-full px-6 gap-1 text-white font-semibold",
+        "inline-flex relative group justify-between items-center transition-colors h-12 bg-orange-500 hover:bg-orange-600 rounded-full px-6 gap-1 text-orange-950 font-semibold",
         "focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-offset-slate-800 focus-visible:ring-offset-2 focus-visible:ring-orange-500"
       )}
     >
