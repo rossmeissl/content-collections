@@ -7,13 +7,13 @@ import { FrameworkSection } from "./components/FrameworkSection";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <HmrSection />
       <TypeSafeApiSection />
       <ValidationSection />
       <TransformationSection />
       <FrameworkSection />
-    </main>
+    </>
   );
 }

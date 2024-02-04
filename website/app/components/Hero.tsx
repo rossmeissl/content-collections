@@ -39,7 +39,7 @@ export function Hero() {
         and begin. Built-in validation ensures the accuracy of your data.
         Preprocess your data before it enters your app.
       </p>
-      <div className="gap-4 sm:flex-row flex-col flex sm:col-span-2 md:col-span-1">
+      <div className="sm:col-span-2 md:col-span-1 mt-5">
         <GettingStartedButton />
       </div>
     </header>

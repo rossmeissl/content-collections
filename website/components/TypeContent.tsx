@@ -24,42 +24,42 @@ export function TypeContent({ title, prefix, content }: Props) {
           <Circle className="text-amber-500 fill-current size-3" />
           <Circle className="text-emerald-500 fill-current size-3" />
         </header>
-        <main className="p-5">
-        <pre>
-          <code>
-            {`---
+        <div className="p-5">
+          <pre>
+            <code>
+              {`---
 title: ${title}
 ---
 
 `}
-          </code>
-        </pre>
-        <div className="flex gap-1.5">
-          {prefix}
-          <Typewriter
-            onInit={(typewriter) => {
-              let t = typewriter;
-              for (const c of content) {
-                t = typewriter
-                  .typeString(c)
-                  .callFunction(() => {
-                    setCurrentContent(c);
-                  })
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .callFunction(() => {
-                    setCurrentContent("");
-                  })
-                  .pauseFor(1000);
-              }
-              t.start();
-            }}
-            options={{
-              loop: true,
-            }}
-          />
+            </code>
+          </pre>
+          <div className="flex gap-1.5">
+            {prefix}
+            <Typewriter
+              onInit={(typewriter) => {
+                let t = typewriter;
+                for (const c of content) {
+                  t = typewriter
+                    .typeString(c)
+                    .callFunction(() => {
+                      setCurrentContent(c);
+                    })
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .callFunction(() => {
+                      setCurrentContent("");
+                    })
+                    .pauseFor(1000);
+                }
+                t.start();
+              }}
+              options={{
+                loop: true,
+              }}
+            />
+          </div>
         </div>
-        </main>
       </div>
       <div className="bg-slate-700 rounded-md shadow-md p-5">
         <p className="font-bold text-xl mb-4">{title}</p>
