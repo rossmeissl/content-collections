@@ -2,6 +2,7 @@ import { allIntegrations } from "@/.content-collections/generated";
 import { Content, Section, Title } from "./Section";
 import { BrandIcon } from "@/components/BrandIcon";
 import Link from "next/link";
+import clsx from "clsx";
 
 export function FrameworkSection() {
   return (
@@ -24,7 +25,15 @@ export function FrameworkSection() {
                 >
                   <BrandIcon
                     icon={integration.icon || integration.name}
-                    className="size-24 md:size-32 grayscale contrast-50 hover:contrast-100 hover:drop-shadow-[0_25px_25px_rgb(255_255_255/0.15)] hover:drop-shadow-white hover:grayscale-0 transition-all duration-500"
+                    className={clsx(
+                      "size-24 md:size-32",
+                      "grayscale contrast-50",
+                      "hover:grayscale-0 hover:contrast-100 ",
+                      "active:grayscale-0 active:contrast-100",
+                      "hover:drop-shadow-[0_25px_25px_rgb(255_255_255/0.15)] hover:drop-shadow-white",
+                      "active:drop-shadow-[0_25px_25px_rgb(255_255_255/0.15)] active:drop-shadow-white",
+                      "transition-all duration-500"
+                    )}
                   />
                 </Link>
               </li>
