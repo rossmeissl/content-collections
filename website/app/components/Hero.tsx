@@ -1,8 +1,6 @@
 import Image from "next/image";
 import LogoImage from "@/assets/logo.png";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { GettingStartedButton } from "./GettingStartedButton";
 
 type LogoProps = {

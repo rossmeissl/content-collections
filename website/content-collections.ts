@@ -1,4 +1,5 @@
 import { defineCollection, defineConfig } from "@content-collections/core";
+import rehypeShiki from "@shikijs/rehype";
 import { compile } from "@mdx-js/mdx";
 
 const integrations = defineCollection({
@@ -15,6 +16,7 @@ const integrations = defineCollection({
     const body = String(
       await compile(data.content, {
         outputFormat: "function-body",
+        rehypePlugins: [[rehypeShiki, { theme: "one-dark-pro" }]],
       })
     );
     let linkText = data.linkText;

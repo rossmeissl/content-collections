@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { run } from "@mdx-js/mdx";
 import * as runtime from "react/jsx-runtime";
 import { Fragment } from "react";
-import { Code } from "bright";
 import { Metadata } from "next";
 import { createStackBlitzLink } from "@/lib/stackblitz";
 
@@ -13,19 +12,6 @@ type Props = {
     page: string;
   };
 };
-
-type SyntaxHighlighterProps = {
-  lang?: string;
-  children?: React.ReactNode;
-};
-
-function SyntaxHighlighter({ lang, children }: SyntaxHighlighterProps) {
-  return (
-    <Code lang={lang} theme="material-palenight">
-      {children}
-    </Code>
-  );
-}
 
 function StackBlitzIcon() {
   return (
@@ -76,9 +62,9 @@ export default async function Page({ params: { category, page } }: Props) {
 
   return (
     <div className="min-w-0">
-      <article className="prose prose-base hover:prose-a:decoration-primary-600 max-w-3xl prose-invert py-5 px-5 sm:px-10">
+      <article className="prose prose-base prose-code:text-base hover:prose-a:decoration-primary-600 max-w-3xl prose-invert py-5 px-5 sm:px-10">
         <h1>{docPage.title}</h1>
-        <Content components={{ pre: SyntaxHighlighter }} />
+        <Content />
       </article>
       {isSample(category, docPage) ? <StackBlitz sample={docPage} /> : null}
     </div>

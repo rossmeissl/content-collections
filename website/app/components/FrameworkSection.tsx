@@ -24,7 +24,7 @@ export function FrameworkSection() {
                 >
                   <BrandIcon
                     icon={integration.icon || integration.name}
-                    className="size-24 md:size-32 grayscale hover:drop-shadow-[0_25px_25px_rgb(255_255_255/0.15)] hover:drop-shadow-white hover:grayscale-0 transition-all duration-500"
+                    className="size-24 md:size-32 grayscale contrast-50 hover:contrast-100 hover:drop-shadow-[0_25px_25px_rgb(255_255_255/0.15)] hover:drop-shadow-white hover:grayscale-0 transition-all duration-500"
                   />
                 </Link>
               </li>

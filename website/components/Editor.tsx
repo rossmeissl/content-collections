@@ -11,7 +11,7 @@ export function Editor({ className, children }: Props) {
   return (
     <div
       className={cn(
-        "bg-[#22272E] rounded-md overflow-x-scroll shadow-md border border-base-600/50",
+        "bg-[#282C34] rounded-md overflow-x-scroll shadow-md border border-base-600/50",
         className
       )}
     >
