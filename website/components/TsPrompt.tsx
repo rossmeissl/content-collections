@@ -14,7 +14,7 @@ function TsPromptElement({ element }: TsPromptElementProps) {
   return (
     <li
       className={cn("px-2 flex gap-2 items-center not-italic", {
-        "bg-slate-600": isActive,
+        "bg-base-600": isActive,
       })}
     >
       <Box className="text-sky-500 size-4" />
@@ -29,9 +29,9 @@ type TsPromptProps = {
 
 export function TsPrompt({ elements }: TsPromptProps) {
   return (
-    <span className="relative text-slate-300">
+    <span className="relative text-base-300">
       <span className="cursor" />
-      <ul className="absolute bg-slate-700 py-1 top-6 left-1 rounded-md shadow-md">
+      <ul className="absolute bg-base-700 py-1 top-6 left-1 rounded-md shadow-md">
         {elements.map((el) => (
           <TsPromptElement key={el} element={el} />
         ))}

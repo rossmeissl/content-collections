@@ -20,12 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
         className={cn(
-          "bg-fixed bg-gradient-to-bl from-slate-950 to-slate-800 text-slate-300",
+          "bg-fixed bg-gradient-to-bl from-base-950 to-base-800 text-base-300",
           "min-h-svh flex flex-col",
-          "selection:bg-orange-500 selection:text-white",
+          "selection:bg-primary-500 selection:text-white",
           inter.className
         )}
       >

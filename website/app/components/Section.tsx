@@ -36,14 +36,14 @@ export function Title({ center, className, children }: TitleProps) {
   return (
     <h2
       className={cn(
-        "text-4xl font-bold mb-6 flex items-center",
+        "text-4xl font-bold mb-6 flex items-center text-slate-100",
         {
           "justify-center": center,
         },
         className
       )}
     >
-      <CheckCircle2 className="inline-block mr-2 size-8 text-primary" />
+      <CheckCircle2 className="inline-block mr-2 size-8 text-primary-600" />
       <span>{children}</span>
     </h2>
   );
@@ -53,7 +53,7 @@ function BackgroundGrid() {
   return (
     <svg
       aria-hidden="true"
-      className="absolute inset-0 h-full w-full text-slate-500/40 [mask-image:radial-gradient(black,transparent)]"
+      className="absolute inset-0 h-full w-full text-base-500/40 [mask-image:radial-gradient(black,transparent)]"
     >
       <defs>
         <pattern
@@ -62,7 +62,7 @@ function BackgroundGrid() {
           height="64"
           patternUnits="userSpaceOnUse"
           x="50%"
-          patternTransform="translate(0 80)"
+          patternTransform="tranbase(0 80)"
         >
           <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
         </pattern>

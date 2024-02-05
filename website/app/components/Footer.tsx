@@ -11,7 +11,7 @@ function FooterLink({ href, title, children }: FooterLinkProps) {
       title={title}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:text-primary"
+      className="hover:text-primary-600"
     >
       {children}
     </a>
@@ -48,7 +48,7 @@ export function Footer() {
         <a
           href="https://sdorra.dev"
           target="_blank"
-          className="hover:text-primary-foreground hover:underline hover:decoration-primary"
+          className="hover:text-base-100 hover:underline hover:decoration-primary-600"
         >
           Sebastian Sdorra
         </a>

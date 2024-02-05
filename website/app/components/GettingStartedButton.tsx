@@ -6,14 +6,14 @@ export function GettingStartedButton() {
     <Link
       href="/docs"
       className={cn(
-        "inline-flex relative group justify-between items-center transition-colors h-12 bg-orange-500 hover:bg-orange-600 rounded-full px-6 gap-1 text-orange-950 font-semibold",
-        "focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-offset-slate-800 focus-visible:ring-offset-2 focus-visible:ring-orange-500"
+        "inline-flex relative group justify-between items-center transition-colors h-12 bg-primary-500 hover:bg-primary-600 rounded-full px-6 gap-1 text-primary-950 font-semibold",
+        "focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-offset-base-800 focus-visible:ring-offset-2 focus-visible:ring-primary-500"
       )}
     >
       <span>Getting Started</span>
       <svg className="overflow-visible size-5" viewBox="0 0 100 100">
         <polyline
-          className="stroke-current duration-300 transition-transform group-hover:translate-x-3"
+          className="stroke-current duration-300 transition-transform group-hover:tranbase-x-3"
           strokeWidth="14"
           fill="none"
           points="40,20 85,50 40,80"

@@ -30,10 +30,10 @@ export function Hero() {
   return (
     <header className="grid grid-cols-1 sm:grid-cols-[auto,1fr] gap-4 py-5 px-10 max-w-5xl mx-auto">
       <Logo className="md:row-span-3" />
-      <h1 className="text-4xl font-bold text-slate-50 self-center">
+      <h1 className="text-4xl font-bold text-base-50 self-center">
         Content Collections
       </h1>
-      <p className="sm:col-span-2 md:col-span-1 text-slate-300">
+      <p className="sm:col-span-2 md:col-span-1">
         Transform your content into type-safe data collections. Eliminate the
         need for manual data fetching and parsing. Simply import your content
         and begin. Built-in validation ensures the accuracy of your data.

@@ -18,8 +18,8 @@ export function TypeContent({ title, prefix, content }: Props) {
 
   return (
     <div className="grid grid-row-2 gap-2">
-      <div className="bg-[#22272E] rounded-md shadow-md border border-slate-600/50">
-        <header className="border border-b-slate-600/50 flex gap-1 rounded-t-md p-2">
+      <div className="bg-[#22272E] rounded-md shadow-md border border-base-600/50">
+        <header className="border border-b-base-600/50 flex gap-1 rounded-t-md p-2">
           <Circle className="text-rose-500 fill-current size-3" />
           <Circle className="text-amber-500 fill-current size-3" />
           <Circle className="text-emerald-500 fill-current size-3" />
@@ -61,7 +61,7 @@ title: ${title}
           </div>
         </div>
       </div>
-      <div className="bg-slate-700 rounded-md shadow-md p-5">
+      <div className="bg-base-700 rounded-md shadow-md p-5">
         <p className="font-bold text-xl mb-4">{title}</p>
         <p>
           {prefix} {currentContent}
