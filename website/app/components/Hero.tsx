@@ -19,6 +19,7 @@ function Logo({ className }: LogoProps) {
         src={LogoImage}
         alt="The logo of Content-Collection: A stack of books."
         className="size-20 md:size-64 relative"
+        priority
       />
     </div>
   );

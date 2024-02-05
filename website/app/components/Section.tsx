@@ -62,7 +62,7 @@ function BackgroundGrid() {
           height="64"
           patternUnits="userSpaceOnUse"
           x="50%"
-          patternTransform="tranbase(0 80)"
+          patternTransform="translate(0 80)"
         >
           <path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
         </pattern>

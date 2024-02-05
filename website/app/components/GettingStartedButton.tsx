@@ -13,7 +13,7 @@ export function GettingStartedButton() {
       <span>Getting Started</span>
       <svg className="overflow-visible size-5" viewBox="0 0 100 100">
         <polyline
-          className="stroke-current duration-300 transition-transform group-hover:tranbase-x-3"
+          className="stroke-current duration-300 transition-transform group-hover:translate-x-3"
           strokeWidth="14"
           fill="none"
           points="40,20 85,50 40,80"

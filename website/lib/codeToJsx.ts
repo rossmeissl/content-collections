@@ -6,8 +6,6 @@ import {
   BundledTheme,
   CodeToHastOptions,
   codeToHast,
-  bundledThemes,
-  createCssVariablesTheme
 } from "shiki";
 
 type Options = Omit<
@@ -44,7 +42,7 @@ export async function codeToJsx(code: string | string[], options: Options) {
 
   let tree: any = await codeToHast(sourceCode, {
     ...options,
-    theme: "one-dark-pro"
+    theme: "one-dark-pro",
   });
 
   if (options.type === "inline") {
